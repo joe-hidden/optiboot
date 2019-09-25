@@ -1349,6 +1349,7 @@ static void do_spm(uint16_t address, uint8_t command, uint16_t data) {
 
 
 #ifdef BIGBOOT
+#ifndef NOBLABLA
 /*
  * Optiboot is designed to fit in 512 bytes, with a minimum feature set.
  * Some chips have a minimum bootloader size of 1024 bytes, and sometimes
@@ -1410,3 +1411,5 @@ OPT2FLASH(OPTIBOOT_CUSTOMVER);
 OPTFLASHSECT const char f_version[] = "Version=" xstr(OPTIBOOT_MAJVER) "." xstr(OPTIBOOT_MINVER);
 
 #endif
+#endif
+
